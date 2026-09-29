@@ -11,7 +11,7 @@
 <div class="identity"><div class="field"><label class="fieldlabel" for="residentName">Name <span class="optional">(optional)</span></label><input type="text" id="residentName" name="residentName" maxlength="100" autocomplete="name"></div><div class="field"><label class="fieldlabel" for="roomNumber">Room number <span class="optional">(optional)</span></label><input type="text" id="roomNumber" name="roomNumber" maxlength="30"></div></div><div class="privacy">Leave your name and room number blank to submit anonymously.</div><div id="error" class="error" role="alert"></div><button type="submit" id="submit">Submit feedback</button></form></section><footer>MR Residence · 200 Feet Radial Road, Chennai</footer></main>
 <script>
 // Set this to the deployed Google Apps Script web-app URL when the Sheet is ready.
-const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwKrisD30j-pqKcOcvco9Noj6yrJLDIjEFCBE94kYkHSqYzPV5VldGx3xpkdn0LQhxKIg/exec';
+const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwKZPEA-DQjtJboPhUinwLz-QceTk4kHc8tkjFx3bec5S08y6HL9wnaD7HOUrdTpBDKuA/exec';
 for(const group of document.querySelectorAll('.options')){const name=group.dataset.name;for(let value=1;value<=5;value++){const label=document.createElement('label');label.innerHTML=`<input type="radio" name="${name}" value="${value}" required aria-label="${value} out of 5"><span aria-hidden="true">${value}</span>`;group.append(label)}}
 const feedbackFrame=document.createElement('iframe');feedbackFrame.name='feedback-storage-frame';feedbackFrame.title='Feedback submission';feedbackFrame.hidden=true;document.body.append(feedbackFrame);
 let pendingRequestId='';let requestTimeout;
